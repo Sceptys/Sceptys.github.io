@@ -6,30 +6,33 @@
 }
 
 body {
-  font-family: var(--font);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  height: 100vh;
   background-image: url(cacti4-background.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  animation: abstract-bg-rotate 20s ease infinite, bg 40s ease-in-out infinite alternate;
+  /* background css */
+  font-family: var(--font);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  background-color: #fff;
+  animation: abstract-bg-rotate 20s ease infinite;
 }
 
 .card {
   text-align: center;
+  min-height: 40%;
   width: 450px;
-  min-height: 500px;
   display: block;
   background: var(--card-bg);
   border-radius: 30px;
   backdrop-filter: blur(60px);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  min-height: 500px;
+  box-shadow: 0px 0px 50px #1111114e;
 }
 
 .big-txt {
@@ -42,28 +45,28 @@ body {
   font-size: 15px;
 }
 
+.bottom {
+  margin-top: 250px;
+  height: 0o;
+}
+
 .btn {
   text-decoration: none;
   color: #fff;
+  text-decoration: none;
   background-image: url(cacti4-background.png);
-  padding: 10px 40px;
+  padding: 0px 40px !important;
   border-radius: 30px;
   margin: 4px;
-  transition: padding 0.2s, background-color 0.3s ease-in-out;
+  transition: padding 0.2s;
 }
 
 .btn:hover {
-  padding: 10px 30px;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 30px;
 }
 
 .logo {
   font-size: 30px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.logo:hover {
-  transform: scale(1.1);
 }
 
 .center {
@@ -71,6 +74,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 10px;
+}
+
+@keyframes bg {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 200%;
+  }
 }
 
 @keyframes abstract-bg-rotate {
@@ -85,20 +97,8 @@ body {
   }
 }
 
-@keyframes bg {
-  0% {
-    background-size: 100%;
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
   }
-  100% {
-    background-size: 200%;
-  }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 0;
-}
