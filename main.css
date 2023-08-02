@@ -1,0 +1,104 @@
+@import url(fonts.css);
+
+:root {
+  --card-bg: rgba(0, 0, 0, 0.42);
+  --font: "Google Sans", sans-serif;
+}
+
+body {
+  background-image: url(cacti4-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background css */
+  font-family: var(--font);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  background-color: #fff;
+  animation: abstract-bg-rotate 20s ease infinite;
+}
+
+.card {
+  text-align: center;
+  min-height: 40%;
+  width: 450px;
+  display: block;
+  background: var(--card-bg);
+  border-radius: 30px;
+  backdrop-filter: blur(60px);
+  min-height: 500px;
+  box-shadow: 0px 0px 50px #1111114e;
+}
+
+.big-txt {
+  font-size: 3rem;
+  margin-bottom: -10px;
+}
+
+.grey {
+  color: #888;
+  font-size: 15px;
+}
+
+.bottom {
+  margin-top: 250px;
+  height: 0o;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  background-image: url(cacti4-background.png);
+  padding: 0px 40px !important;
+  border-radius: 30px;
+  margin: 4px;
+  transition: padding 0.2s;
+}
+
+.btn:hover {
+  padding: 0 30px;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10px;
+}
+
+@keyframes bg {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 200%;
+  }
+}
+
+@keyframes abstract-bg-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
